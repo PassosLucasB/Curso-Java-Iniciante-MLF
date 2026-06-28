@@ -14,6 +14,8 @@ Link dos vídeos (https://www.youtube.com/watch?v=RR5EGltxbl8&list=PLCUSYmPGwekc
 <br>
 <br>
 
+## TRILHA 1  - Introdução ao Java e Tipos de Dados
+
 
 ## <h2> PLATAFORMA JAVA </h2>
 <br>
@@ -225,6 +227,45 @@ Quando utilizar operadores de atribuição, o operando da direita deve ser compa
 - char = Character
 - boolean = Boolean
 - String já é um Dado do tipo Objeto
+
+<br>
+
+- Os Dados Primitivos guardam o valor bruto e são focados em performance, os Dados tipo Objeto (tipos de referência) armazenam endereços de memória, possuindo propriedades e podendo executar métodos.
+
+### SCANNER
+
+```java
+import java.util.Scanner;
+
+Scanner sc =  new Scanner(System.in); //sc foi o nome dado ao novo scanner
+
+System.out.println("Digite a nota 1: ");
+float nota1 = sc.nextFloat(); //float é o tipo do dado determinado para ser recebido
+System.out.println("A nota 1 é: " + nota1);
+
+```
+<br>
+<br>
+<br>
+
+## TRILHA 2  - Estruturas Condicionais
+
+<br>
+
+- EXPRESSÃO CONDICIONAL
+
+<br>
+
+- Definição: São intruções que permitem executar diferentes blocos de código conforme uma condição lógica.
+
+<br>
+  
+  - Exemplo no mundo real: "Se estiver chovendo, leve guarda-chuva. Senão, vá sem ele."
+
+<br>
+
+
+
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT">
