@@ -7,7 +7,7 @@ public class Condicionais_2 {
         int idadeAluno = 18;
         double alturaAluno = 1.70;
 
-        if(idadeAluno >= 18 && alturaAluno >= 1.80){
+        if(idadeAluno == 18 && alturaAluno >= 1.80 && nomeAluno.equals("Matheus")){
             System.out.println("Aluno pode entrar na equipe de basquete");
         }else{
             System.out.println("Aluno não pode entrar na equipe de basquete");
