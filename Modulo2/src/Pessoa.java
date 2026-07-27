@@ -10,6 +10,7 @@ public class Pessoa {
         protected = apenas classes do mesmo pacote ou herança têm acesso
      */
 
+
     public void setNome(String nome){
         this.nome = nome;
     }
@@ -40,5 +41,10 @@ public class Pessoa {
 
     public String getCpf() {
         return cpf;
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome + "\nIdade: " + idade + "\nAltura: " + altura + "\nCPF: " + cpf + "\n";
     }
 }

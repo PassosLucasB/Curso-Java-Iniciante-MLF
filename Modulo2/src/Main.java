@@ -4,9 +4,10 @@ public class Main {
     public static void main(String[] args) {
 
         Pessoa p = new Pessoa();
-        p.setNome ("Matheus");
-        p.setIdade (20);
+        p.setNome("Matheus");
+        p.setIdade(20);
         p.setAltura(1.70);
         p.setCpf("123.456.789-00");
-    }
+
+        System.out.println(p);    }
 }
