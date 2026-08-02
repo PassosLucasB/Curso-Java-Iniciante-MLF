@@ -8,4 +8,8 @@ public class PersonagemDBZ {
     public void lutar(){
         System.out.println(nome+" está lutando");
     }
+
+    public void transformar(){
+        System.out.println(nome + " está aumentando seu poder");
+    }
 }
