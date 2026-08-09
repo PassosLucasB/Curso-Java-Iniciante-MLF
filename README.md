@@ -252,7 +252,7 @@ System.out.println("A nota 1 é: " + nota1);
 
 <br>
 
-- EXPRESSÃO CONDICIONAL
+EXPRESSÃO CONDICIONAL
 
 <br>
 
@@ -263,6 +263,297 @@ System.out.println("A nota 1 é: " + nota1);
   - Exemplo no mundo real: "Se estiver chovendo, leve guarda-chuva. Senão, vá sem ele."
 
 <br>
+
+###IF 
+
+if (condicao) {
+	//bloco executado se a condicao for verdadeira
+
+}
+
+Exemplos:
+
+```java
+
+
+//Somente IF
+
+int idade = 20;
+if (idade >= 18) {
+	System.out.println("Maior de idade.");
+}
+
+
+
+// IF e ELSE
+
+int idade = 20;
+if (idade >= 18) {
+	System.out.println("Maior de idade.");
+}else{
+	System.out.println("Menor de idade.");
+}
+
+
+
+// IF, ELSE e ELSE IF
+
+int idade = 85;
+if (idade >= 90) {
+	System.out.println("Conceito A");
+}else if{
+	System.out.println("Conceito B");
+}else{
+	System.out.println("Conceito C ou inferior");
+}
+
+
+```
+<br>
+<br>
+<br>
+
+
+
+###SWITCH 
+
+switch (condicao) {
+	case 1: //bloco executado se a condicao for verdadeira; break;
+	case 2: //bloco executado se a condicao for verdadeira; break;
+	case 3: //bloco executado se a condicao for verdadeira; break;
+	default: //bloco executado se nenhuma condicao for verdadeira
+}
+
+Exemplos:
+
+```java
+
+
+//Somente IF
+
+int dia = 3;
+switch (dia) {
+	case 1: System.out.println("Domingo"); break;
+	case 2: System.out.println("Segunda"); break;
+	default: System.out.println("Outro dua");
+}
+
+```
+<br>
+<br>
+
+
+DIFERENÇAS ENTRE IF E SWITCH
+
+IF = Avalia expressões lógicas, suporta intervalos e é mais flexível.
+SWITCH = Avalia apenas valores fixos, suporta somente igualdades e é mais legível em alguns casos.
+
+
+Erros Comuns
+
+- Usar = ao invés de ==
+- Esquecer chaves {} em blocos maiores
+- Colocar ; logo após o if(condição)
+- Esquecer o break no switch
+
+No caso de comparações, ao comparar valores utiliza-se o == ou < ou >, <= ou >=. Mas ao comparar textos utiliza-se equals nomeVariavel.equals("").
+
+
+<br>
+<br>
+<br>
+
+## TRILHA 3  - Estruturas de Repetição
+
+<br>
+- Definição: Permitem executar um bloco de código várias vezes, com base em uma condição lógica.
+
+<br>
+  
+  - Use quando quiser repetir ações como contar, percorrer listas ou esperar uma condição mudar.
+
+<br>
+
+### TIPOS DE LAÇOS EM JAVA
+
+Quando usar cada tipo:
+
+FOR = quando souber quantas vezes repetir;
+WHILE = quando repetir até a condição mudar;
+D0-WHILE = garante pelo menos uma execução.
+
+
+### FOR
+
+O laço FOR é uma estrutura de repetição compacta que agrupa três elementos na mesma linha: a inicialização de uma variável, a condição de parada e o incremento (ou decremento).
+
+Foco: Contagem estruturada e interação sobre coleções com tamanhos conhecidos.
+
+- É utilizado para gerenciar repetições com número predefinido de vezes;
+- Cria e destrói a variável de controle no próprio cabeçalho;
+- Evita loops infinitos acidentais porque obriga o desenvolvedor a colocar o incremento no cabeçalho.
+
+
+
+ESTRUTURA DO FOR
+
+```java
+
+for (int i = 0; i<5; i++) {
+	System.out.println("O valor de i: "+i);
+}
+
+```
+int i = 0 -> iniciar o contador em zero
+i < 5 -> condicional (verifica se continua o contador menor que 5)
+i++ -> incrementa após cada repetição
+
+
+
+
+### WHILE
+
+O laço WHILE é uma estrutura de repetição baseada apenas em uma condição lógica. Ele testa a condição antes de executar o bloco de código. Se for verdadeira, ele executa, se for falsa, ele para.
+
+Foco: Repetir um bloco enquanto uma situação externa ou interna for válida, sem número fixo de vezes.
+
+- Gerencia as repetições com quantidade de vezes desconhecida;
+- Exige que a variável seja criada antes dele e atualiza centro do bloco;
+- Pode causar loops infinitos se o programador esquecer de atualizar a condição dentro das chaves.
+
+
+
+ESTRUTURA DO WHILE
+
+```java
+
+int i = 0;
+while (i<5){
+	System.out.println(i);
+	i++;
+}
+
+```
+int i = 0 -> iniciar o contador em zero
+i < 5 -> condicional (verifica se continua o contador menor que 5)
+i++ -> incrementa após cada repetição
+
+
+
+### do-while
+
+O laço DO-WHILE é uma estrutura de repetição baseada apenas em uma condição lógica. Ele executa o bloco de código e apenas depois avaliar se a condição é verdadeira. Se for verdadeira, ele repete, se for falsa, ele encerra.
+
+Foco: Garantir uma execução obrigatória antes de qualquer verificação lógica.
+
+- Gerenciar as repetições com quantidades de vezes desconhecida;
+- Exige que a variável seja criada antes dele e atualizada dentro do bloco;
+- Pode causar loops infinitos se o programador esquecer de atualizar a condição dentro das chaves.
+
+Uso ideal: Para menus de sistemas, validação de entradas ou leitura de dados onde você precisa interagir com o usuário antes de decidir se continua.
+
+
+ESTRUTURA DO DO-WHILE
+
+```java
+
+int i = 0;
+do{
+	System.out.println(i);
+	i++;
+}while (i<5);
+
+```
+int i = 0 -> iniciar o contador em zero
+i < 5 -> condicional (verifica se continua o contador menor que 5)
+i++ -> incrementa após cada repetição
+
+
+<br>
+<br>
+<br>
+
+## TRILHA 4  - Vetores e Matrizes
+
+<br>
+O QUE É UM VETOR?
+<br>
+Definição: Um vetor (ou array) é uma estrutura de dados que armazena múltiplos valores do mesmo tipo, em posições consecutivas na memória.
+Pense com uma fila de caixas numeradas, onde cada caixa guarda um valor.
+
+<br>
+
+SINTAXE BÁSICA
+
+```java
+int[] numeros =  new int[5]; //vetor de 5 posições
+
+```
+Cria (ou estancia) um vetor de inteiros com 5 posições, todas iniciadas com zero.
+
+numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
+numeros[3] = 40;
+numeros[4] = 50.
+
+Os índices começam em 0 e vão até o tamanho -1. Nesse caso, o tamanho é 5, porém inicia-se a contagem no 0, logo de 0 a 4.
+<br>
+LEMBRETE: No Java os vetores possuem tamanhos fixos e precisam ser inicializados.
+<br>
+PERCORRENDO COM FOR:
+<br>
+
+```java
+for(int i=0, i<numeros.length; i++){
+	System.out.println(numeros[i]);
+}
+```
+<br>
+Usando o For para alterar um valor específico:
+<br>
+
+```java
+for(int i=0, i<numeros.length; i++){
+	System.out.println(numeros[i]);
+	if(i==2){
+	numero[i] = 50;
+}
+}
+```
+<br>
+<br>
+LEMBRETE: Use .length para saber o tamanho do vetor.
+<br>
+
+INICIALIAÇÃO DIRETA
+
+
+<br>
+
+```java
+
+int[] idades = {18,21,25,30};
+
+//Criação e preenchimento ao mesmo tempo.
+String[]nomes = {"Ana", "Joao", "Pedro"};
+	for(int i = 0; i<nomes.length; i++){
+		System.out.println("Olá, " + nomes[i]);
+		}
+```
+<br>
+
+FOR-EACH EM ARRAYS
+
+
+
+
+
+
+
+
+
+
 
 
 
