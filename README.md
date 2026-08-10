@@ -264,7 +264,7 @@ EXPRESSÃO CONDICIONAL
 
 <br>
 
-###IF 
+### IF 
 
 if (condicao) {
 	//bloco executado se a condicao for verdadeira
@@ -315,16 +315,22 @@ if (idade >= 90) {
 
 
 
-###SWITCH 
-
+### SWITCH 
+<br>
 switch (condicao) {
+<br>
 	case 1: //bloco executado se a condicao for verdadeira; break;
+	<br>
 	case 2: //bloco executado se a condicao for verdadeira; break;
+	<br>
 	case 3: //bloco executado se a condicao for verdadeira; break;
+	<br>
 	default: //bloco executado se nenhuma condicao for verdadeira
+	<br>
 }
-
+<br>
 Exemplos:
+<br>
 
 ```java
 
@@ -344,18 +350,20 @@ switch (dia) {
 
 
 DIFERENÇAS ENTRE IF E SWITCH
-
+<br>
+<br>
 IF = Avalia expressões lógicas, suporta intervalos e é mais flexível.
+<br>
 SWITCH = Avalia apenas valores fixos, suporta somente igualdades e é mais legível em alguns casos.
-
-
+<br>
+<br>
 Erros Comuns
-
+<br>
 - Usar = ao invés de ==
 - Esquecer chaves {} em blocos maiores
 - Colocar ; logo após o if(condição)
 - Esquecer o break no switch
-
+<br>
 No caso de comparações, ao comparar valores utiliza-se o == ou < ou >, <= ou >=. Mas ao comparar textos utiliza-se equals nomeVariavel.equals("").
 
 
@@ -364,7 +372,7 @@ No caso de comparações, ao comparar valores utiliza-se o == ou < ou >, <= ou >
 <br>
 
 ## TRILHA 3  - Estruturas de Repetição
-
+<br>
 <br>
 - Definição: Permitem executar um bloco de código várias vezes, com base em uma condição lógica.
 
@@ -373,18 +381,24 @@ No caso de comparações, ao comparar valores utiliza-se o == ou < ou >, <= ou >
   - Use quando quiser repetir ações como contar, percorrer listas ou esperar uma condição mudar.
 
 <br>
+<br>
 
 ### TIPOS DE LAÇOS EM JAVA
+<br>
 
 Quando usar cada tipo:
+<br>
+<br>
 
 FOR = quando souber quantas vezes repetir;
+<br>
 WHILE = quando repetir até a condição mudar;
+<br>
 D0-WHILE = garante pelo menos uma execução.
-
-
+<br>
+<br>
 ### FOR
-
+<br>
 O laço FOR é uma estrutura de repetição compacta que agrupa três elementos na mesma linha: a inicialização de uma variável, a condição de parada e o incremento (ou decremento).
 
 Foco: Contagem estruturada e interação sobre coleções com tamanhos conhecidos.
@@ -393,9 +407,10 @@ Foco: Contagem estruturada e interação sobre coleções com tamanhos conhecido
 - Cria e destrói a variável de controle no próprio cabeçalho;
 - Evita loops infinitos acidentais porque obriga o desenvolvedor a colocar o incremento no cabeçalho.
 
-
-
+<br>
+<br>
 ESTRUTURA DO FOR
+<br>
 
 ```java
 
@@ -405,13 +420,19 @@ for (int i = 0; i<5; i++) {
 
 ```
 int i = 0 -> iniciar o contador em zero
+<br>
 i < 5 -> condicional (verifica se continua o contador menor que 5)
+<br>
 i++ -> incrementa após cada repetição
 
 
-
+<br>
+<br>
 
 ### WHILE
+
+<br>
+
 
 O laço WHILE é uma estrutura de repetição baseada apenas em uma condição lógica. Ele testa a condição antes de executar o bloco de código. Se for verdadeira, ele executa, se for falsa, ele para.
 
@@ -421,9 +442,12 @@ Foco: Repetir um bloco enquanto uma situação externa ou interna for válida, s
 - Exige que a variável seja criada antes dele e atualiza centro do bloco;
 - Pode causar loops infinitos se o programador esquecer de atualizar a condição dentro das chaves.
 
-
+<br>
+<br>
 
 ESTRUTURA DO WHILE
+
+<br>
 
 ```java
 
@@ -435,12 +459,18 @@ while (i<5){
 
 ```
 int i = 0 -> iniciar o contador em zero
+<br>
 i < 5 -> condicional (verifica se continua o contador menor que 5)
+<br>
 i++ -> incrementa após cada repetição
 
+<br>
+<br>
 
+### DO-WHILE
 
-### do-while
+<br>
+
 
 O laço DO-WHILE é uma estrutura de repetição baseada apenas em uma condição lógica. Ele executa o bloco de código e apenas depois avaliar se a condição é verdadeira. Se for verdadeira, ele repete, se for falsa, ele encerra.
 
@@ -451,9 +481,11 @@ Foco: Garantir uma execução obrigatória antes de qualquer verificação lógi
 - Pode causar loops infinitos se o programador esquecer de atualizar a condição dentro das chaves.
 
 Uso ideal: Para menus de sistemas, validação de entradas ou leitura de dados onde você precisa interagir com o usuário antes de decidir se continua.
-
+<br>
 
 ESTRUTURA DO DO-WHILE
+
+<br>
 
 ```java
 
@@ -465,7 +497,9 @@ do{
 
 ```
 int i = 0 -> iniciar o contador em zero
+<br>
 i < 5 -> condicional (verifica se continua o contador menor que 5)
+<br>
 i++ -> incrementa após cada repetição
 
 
@@ -482,24 +516,35 @@ Definição: Um vetor (ou array) é uma estrutura de dados que armazena múltipl
 Pense com uma fila de caixas numeradas, onde cada caixa guarda um valor.
 
 <br>
-
+<br>
 SINTAXE BÁSICA
+<br>
 
 ```java
 int[] numeros =  new int[5]; //vetor de 5 posições
 
 ```
+<br>
 Cria (ou estancia) um vetor de inteiros com 5 posições, todas iniciadas com zero.
-
+<br>
 numeros[0] = 10;
+<br>
 numeros[1] = 20;
+<br>
 numeros[2] = 30;
+<br>
 numeros[3] = 40;
+<br>
 numeros[4] = 50.
-
-Os índices começam em 0 e vão até o tamanho -1. Nesse caso, o tamanho é 5, porém inicia-se a contagem no 0, logo de 0 a 4.
+<br>
+<br>
+Os índices começam em 0 e vão até o tamanho -1. 
+<br>
+Nesse caso, o tamanho é 5, porém inicia-se a contagem no 0, logo de 0 a 4.
+<br>
 <br>
 LEMBRETE: No Java os vetores possuem tamanhos fixos e precisam ser inicializados.
+<br>
 <br>
 PERCORRENDO COM FOR:
 <br>
@@ -525,7 +570,8 @@ for(int i=0, i<numeros.length; i++){
 <br>
 LEMBRETE: Use .length para saber o tamanho do vetor.
 <br>
-
+<br>
+<br>
 INICIALIAÇÃO DIRETA
 
 
