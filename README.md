@@ -8,6 +8,9 @@
 
 <br>
 <br>
+## MÓDULO 1
+<br>
+<br>
 
 Link dos vídeos (https://www.youtube.com/watch?v=RR5EGltxbl8&list=PLCUSYmPGwekcSVuf64MKje9nVf2wpToNF&index=2&t)
 
@@ -56,16 +59,25 @@ Link dos vídeos (https://www.youtube.com/watch?v=RR5EGltxbl8&list=PLCUSYmPGwekc
 <br>
 
 abstract	default	if	private	this
+<br>
 boolean	do	implements	protected	throw
+<br>
 break	double	import	public	throws
+<br>
 byte	else	instanceof	return	transient
+<br>
 case	extends	int	short	try
+<br>
 catch	final	interface	static	void
+<br>
 char	finally	long	strictfp	volatile
+<br>
 class	float	native	super	while
-const	for	new	switch	
+<br>
+const	for	new	switch
+<br>
 continue	goto	package	synchronized	
-
+<br>
 <br>
 
 ## IDENTIFICADORES
@@ -510,9 +522,12 @@ i++ -> incrementa após cada repetição
 ## TRILHA 4  - Vetores e Matrizes
 
 <br>
-O QUE É UM VETOR?
+<br>
+<br>
+### O QUE É UM VETOR?
 <br>
 Definição: Um vetor (ou array) é uma estrutura de dados que armazena múltiplos valores do mesmo tipo, em posições consecutivas na memória.
+<br>
 Pense com uma fila de caixas numeradas, onde cada caixa guarda um valor.
 
 <br>
@@ -591,10 +606,140 @@ String[]nomes = {"Ana", "Joao", "Pedro"};
 
 FOR-EACH EM ARRAYS
 
+<br>
+
+```java
+
+	for(String nome: nomes){
+		System.out.println(nome);
+		}
+```
+<br>
+<br>
+<br>
+ATENÇÃO AOS ERROS:
+<br>
+- Acessar nyumeros[5] (fora do limite);
+<br>
+- Tentar usar um vetor antes de inicializar;
+<br>
+- Confundir índice com valor.
+<br>
+<br>
+<br>
+
+### O QUE É UMA MATRIZ?
+
+<br>
+Definição: Uma matriz (ou um array bidimensional) é como uma tabela: organiza valores em linhas e colunas.
+<br>
+Imagine uma planilha do Excel com números e organizados por posição.
+<br>
+<br>
+
+DECLARAÇÃO DE MATRIZ
+<br>
+
+```java
+int[] [] matriz =  new int[5] [4];
+
+```
+<br>
+Cria uma matriz com 3 linhas e 4 colunas.
+<br>
+Cada elemento é acessado por dois índices: linha e coluna.
+
+<br>
+<br>
+
+ATRIBUINDO VALORES
+<br>
+
+```java
+int[] [] matriz =  new int[5] [4];
+matriz[0][0] = 10;
+matriz[1][2] = 25;
+matriz[2][3] = 40;
+
+```
+<br>
+<br>
+
+PERCORRENDO COM DOIS FOR
+<br>
+
+```java
+int[] [] matriz =  new int[5] [4];
+matriz[0][0] = 10;
+matriz[1][2] = 25;
+matriz[2][3] = 40;
+
+for(int i=0; i<3; i++){
+	for (int j=0; j<4; j++){
+		System.out.println(matriz[i][j] + "");
+		}
+		System.out.println();
+}
+```
+<br>
+Primeiro for -> linhas
+<br>
+Segundo for -> colunas
+<br>
+<br>
+
+<br>
+INICIALIAÇÃO DIRETA
 
 
+<br>
+
+```java
+
+int[][]numeros = {
+//Criação e preenchimento ao mesmo tempo.
+	{1,2,3},
+	{4,5,6},
+	{7,8,9}
+};
+
+```
+<br>
+
+<br>
+<br>
+## MÓDULO 2
+<br>
+<br>
+
+Link dos vídeos (https://www.youtube.com/watch?v=CbJh4gvmCco)
+
+<br>
+<br>
+
+## TRILHA 1  - Programação Orientada a Objetos
 
 
+## <h2> HERANÇA E POLIMORFISMO </h2>
+<br>
+HERANÇA EM JAVA
+<br>
+<br>
+Herança é um mecanismo que permite criar uma nova classe com a definição de uma classe já existente.
+<br>
+Quando uma classe herda de outra, todos os métodos e atributos aparecem automaticamente na classe nova.
+<br>
+A herança permite à classe qua está sendo herdada redefinir qualquer comportamento que não goste (sobreposição).
+<br>
+Herança normalmente produz subclasses mais especializadas, mais específicas, que as superclasses.
+<br>
+Uma subclasse guarda a relação "é filho de" ou "é um .." com a superclasse.
+
+<br>
+POLIMORFISMO EM JAVA
+<br>
+<br>
+Polimorfismo é
 
 
 
