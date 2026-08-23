@@ -1,6 +1,4 @@
-package Model;
-
-import java.sql.SQLOutput;
+package Exemplo1;
 
 public class Goku  extends PersonagemDBZ{
 

@@ -1,4 +1,4 @@
-package Model;
+package Exemplo1;
 
 public class Vegetta extends PersonagemDBZ{
 
