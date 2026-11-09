@@ -8,7 +8,9 @@
 
 <br>
 <br>
+
 ## MÓDULO 1
+
 <br>
 <br>
 
@@ -708,19 +710,79 @@ int[][]numeros = {
 
 <br>
 <br>
+
 ## MÓDULO 2
+
 <br>
 <br>
 
-Link dos vídeos (https://www.youtube.com/watch?v=CbJh4gvmCco)
+Link dos vídeos (https://www.youtube.com/watch?v=CbJh4gvmCco e https://www.youtube.com/watch?v=BzyCOEwkPX0&list=PLCUSYmPGwekfNNbgSBsepDqAk1fktpgpf&index=19)
 
 <br>
 <br>
 
 ## TRILHA 1  - Programação Orientada a Objetos
 
+<br>
+<br>
 
-## <h2> HERANÇA E POLIMORFISMO </h2>
+## <h2> ENCAPSULAMENTO E HERANÇA </h2>
+
+<br>
+<br>
+ENCAPSULAMENTO EM JAVA
+<br>
+<br>
+Consiste em esconder os detalhes internos de implementação de uma classe. Expõe apenas o que é necessário através de métodos públicos.
+<br>
+Os atributos da classe só poderão ser acessados e modificados por meio de métodos (geralmente conhecidos como getters e setters).
+<br>
+Os atributos podem ser divididos em três tipos:
+
+<br>
+
+- public = livre acesso
+- protected = scesso somente por classes do mesmo pacote
+- private = acesso somente dentro da mesma classe
+  
+<br>
+<br>
+Exemplo
+<br>
+<br>
+
+```java
+
+public class Pessoa{
+	private String nome;
+	private int idade;
+
+//O construtor leva o mesmo nome da classe e passando por parâmetro o nome e a idade
+public Pessoa(String nome, int idade){
+	this.nome = nome; //Inicializando o atributo nome do objeto Pessoa
+	this.idade = idade; //Inicializando o atributo idade do objeto Pessoa
+}
+//Métodos getters e setters para encapsulamento para acessar os atributos
+public String getNome(){
+	return nome;
+}
+public void setNome(String nome){
+	this.nome = nome;
+}
+public String getIdade(){
+	return idade;
+}
+public void setIdade(int idade){
+	if(idade > 0{
+		this.idade = idade;
+	}else{
+		throw new IllegalArgumentException("Idade deve ser maior que zero.");}
+}
+}
+
+```
+<br>
+<br>
 <br>
 HERANÇA EM JAVA
 <br>
@@ -734,16 +796,128 @@ A herança permite à classe qua está sendo herdada redefinir qualquer comporta
 Herança normalmente produz subclasses mais especializadas, mais específicas, que as superclasses.
 <br>
 Uma subclasse guarda a relação "é filho de" ou "é um .." com a superclasse.
+<br>
+Quando herdamos, devemos nos perguntar se a classe que está sendo herdada é do mesmo tipo da classe herdando.
+<br>
+A forma básica de herança em Java é a extensão simples sntre uma superclasse e sua classe derivada. Utilizando-se da definição da classe derivada a palavra-chave extends.
+<br>
+<br>
+Exemplo
+<br>
+<br>
 
+
+```java
+
+//Subclasse (funcionario que herda de Pessoa)
+public class Funcionario extends Pessoa{
+private double salario;
+}
+public Funcionario(String nome, int idade, double salario){
+// Chama o construtor da superclasse
+super(nome, idade);
+this.salario = salario;
+}
+//Getter e Setter para salario
+public double get Salario(){
+return salario;
+}
+public void setSalario(double salario){
+if(salario>0){
+this.salario = salario;
+}else}
+throe new IllegalArgumentException("Salário deve ser maior que zero.");}
+}
+}
+
+
+```
+<br>
+<br>
+<br>
+
+## <h2> ABSTRAÇÃO E POLIMORFISMO </h2>
+
+<br>
+<br>
+ABSTRAÇÃO EM JAVA
+<br>
+<br>
+Abstração em Java permite que os desenvolvedores se concentrem em interações de alto nível, ocultando os detalhes complexos. Usada para impor ao desenvolvedor que implemente os métodos da classe herdada.
+<br>
+<br>
+Exemplo
+<br>
+<br>
+
+
+```java
+
+//Classe abstrata
+public abstract class Pessoa{
+	private String nome;
+	private int idade;
+
+//Construtor
+public Pessoa(Strign nome, int idade){
+	this.nome = nome;
+	this.idade = idade;
+}
+
+//GETTERS E SETTERS
+//Método abstrato que deve ser implementado pelas subclasses
+public abstract void mostrarProfissao();
+}
+
+// Funcionario estente Pessoa e implementa o método abstrato
+public class Funcionario extends Pessoa{
+
+	//Implementação do método abstrato
+	@Override
+	public void mostrarProfissao(){
+		System.out.println(“Profissão: Funcionário de uma empresa.”);
+}
+}
+
+```
+<br>
+<br>
 <br>
 POLIMORFISMO EM JAVA
 <br>
 <br>
-Polimorfismo é
+Polimorfismo ocorre quando podemos tratar objetos de diferentes subclasses através de uma mesma referência da superclasse. Isso permite que um mesmo método tenha comportamentos diferentes dependendo do objeto que o chama. Utiliza a sobreposição @Override.
+<br>
+<br>
+Exemplo
+<br>
+<br>
 
 
+```java
 
+public class TestePolimorfismo{
+public static void main(String[] args){
+//Criando objetos das subclasses, mas referenciando-os pela superclasse Pessoa
+Pessoa pessoa1 = new Funcionario(“Mateus”, 30, 5000.00);
+Pessoa pessoa2 = new Estudante(“Lucas”, 20, “Ciência da Computação”);
 
+// Exibindo informações e profissões (polimorfismo)
+
+pessoa1.exibirInformacoes();
+pessoa1.mostrarProfissao();
+
+System.out.println(“\n);
+
+pessoa2.exibirInformacoes();
+pessoa2.mostrarProfissao();
+}
+}
+
+```
+<br>
+<br>
+<br>
 
 
 
